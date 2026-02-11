@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website in Wartung</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #1e1e1e;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #cccccc;
+        }
+
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #4caf50;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1.5s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Website in Wartung</h1>
+    <p>Wir arbeiten gerade an unserer Website. Bitte schaue später wieder vorbei!</p>
+    <div class="loader"></div>
+</body>
+</html>
