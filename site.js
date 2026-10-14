@@ -81,14 +81,29 @@
     if(box){ box.checked=true; var f=document.getElementById('quote'); if(f&&f.scrollIntoView) setTimeout(function(){f.scrollIntoView({block:'start'})},60); }
   })();
 
-  // Formular
+  // Formular (Web3Forms: Access Key von web3forms.com, öffentlich und für info@kosaco.de angelegt)
+  var WEB3FORMS_KEY='HIER-ACCESS-KEY-EINTRAGEN';
   var form=document.getElementById('quote'), msg=document.getElementById('formMsg');
   if(form){form.addEventListener('submit',function(e){
     e.preventDefault();msg.hidden=false;
     var n=document.getElementById('f-name').value.trim(),m=document.getElementById('f-mail').value.trim(),ok=document.getElementById('f-dsgvo').checked;
     if(!n||!/.+@.+\..+/.test(m)){msg.style.color='#B7791F';msg.textContent='Bitte Name und eine gültige E-Mail-Adresse eintragen.';return;}
     if(!ok){msg.style.color='#B7791F';msg.textContent='Bitte stimmen Sie der Datenverarbeitung zu.';return;}
-    msg.style.color='';msg.textContent='Danke, '+n+'! In dieser Vorschau wird noch nichts verschickt. Auf der fertigen Website geht Ihre Anfrage direkt an info@kosaco.de.';
+    var sv=[].map.call(form.querySelectorAll('[data-service]:checked'),function(c){return c.parentNode.textContent.trim();});
+    var btn=form.querySelector('button[type=submit]');
+    var data={access_key:WEB3FORMS_KEY,subject:'Neue Anfrage über kosaco.de',from_name:'Kosaco Website',
+      name:n,email:m,telefon:document.getElementById('f-phone').value.trim(),ort:document.getElementById('f-plz').value.trim(),
+      leistungen:sv.join(', ')||'keine Auswahl',nachricht:document.getElementById('f-msg').value.trim(),botcheck:''};
+    if(!WEB3FORMS_KEY||WEB3FORMS_KEY.indexOf('HIER')===0){msg.style.color='#B7791F';msg.textContent='Das Formular ist noch nicht freigeschaltet. Bitte rufen Sie uns an oder schreiben Sie an info@kosaco.de.';return;}
+    btn.disabled=true;msg.style.color='';msg.textContent='Wird gesendet …';
+    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)})
+      .then(function(r){return r.json();})
+      .then(function(r){
+        if(r.success){msg.style.color='';msg.textContent='Danke, '+n+'! Ihre Anfrage ist bei uns angekommen. Wir melden uns schnellstmöglich.';form.reset();}
+        else{throw new Error(r.message);}
+      })
+      .catch(function(){msg.style.color='#B7791F';msg.textContent='Das Senden hat leider nicht geklappt. Bitte rufen Sie uns an (+49 1578 0608138) oder schreiben Sie an info@kosaco.de.';})
+      .then(function(){btn.disabled=false;});
   });}
 })();
 

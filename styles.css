@@ -1,3 +1,9 @@
+@font-face{font-family:'Archivo';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/archivo-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/archivo-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:800;font-display:swap;src:url(fonts/archivo-latin-800-normal.woff2) format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/barlow-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/barlow-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/barlow-latin-600-normal.woff2) format('woff2')}
 /* Layout: Querschnitt-Prinzip – Oberfläche (Garten) oben, Trasse unten; Logo-Grün als einziges Signal, Logo-Leisten als Gliederung */
 :root{
   --bg:#FFFFFF; --bg-2:#F3F6F2; --ink:#111411; --muted:#535C55; --line:#DCE3DA;
@@ -564,3 +570,13 @@ html[data-page="privacy"] body::after{inset:0 0 -200px 0;opacity:1;transform:non
 .hero-shield .sh-orbit.b{animation-duration:38s;animation-direction:reverse}
 @keyframes orbit{to{transform:rotate(360deg)}}
 @media (prefers-reduced-motion:reduce){.hero-plot .pl-edge,.hero-plot .pl-house,.hero-shield .sh-check{animation:none;stroke-dashoffset:0}}
+
+/* Kontaktformular: Auswahl-Chips (statt nativer Checkboxen) */
+.chips-in label{position:relative;transition:background .15s,border-color .15s,color .15s;user-select:none}
+.chips-in label::before{content:"";width:16px;height:16px;flex:none;border:2px solid #9BA89A;border-radius:50%;background:#fff;box-sizing:border-box;transition:all .15s}
+.chips-in input{position:absolute;opacity:0;width:1px;height:1px;padding:0;border:0;pointer-events:none}
+.chips-in label:hover{border-color:var(--green)}
+.chips-in label:has(input:checked){background:var(--green-soft);border-color:var(--green);color:var(--green-ink);font-weight:600}
+.chips-in label:has(input:checked)::before{border-color:var(--green);background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat}
+.chips-in label:has(input:focus-visible){outline:2px solid var(--green-ink);outline-offset:2px}
+fieldset legend{padding:0}
