@@ -583,11 +583,13 @@ html[data-page="privacy"] body::after{inset:0 0 -200px 0;opacity:1;transform:non
 fieldset legend{padding:0}
 
 /* ===== Mobile-Feinschliff ===== */
+.topbar .av{display:none}
 @media (max-width:700px){
   .topbar{font-size:.8rem}
   .topbar .wrap{padding-block:7px;gap:2px 14px}
   .topbar ul li:first-child,.topbar .em{display:none}
   .topbar ul{gap:4px 18px}
+  .topbar .av{display:block;color:var(--green);font-weight:600;font-size:.78rem;width:100%}
   .float{right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));gap:8px}
   .float a{width:46px;height:46px}
   .float svg{width:23px;height:23px}
@@ -599,3 +601,5 @@ fieldset legend{padding:0}
 /* Unter der Fußzeile nichts Weißes zeigen (Überscrollen, hohe Fenster) */
 footer.site{box-shadow:0 400px 0 400px var(--black);clip-path:inset(0 0 -800px 0)}
 html{overflow-x:clip}
+
+@media (max-width:700px){#trasse-bg .tb-stub{display:none}#trasse-bg .tb-node{opacity:.9}}
