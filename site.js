@@ -82,7 +82,7 @@
   })();
 
   // Formular (Web3Forms: Access Key von web3forms.com, öffentlich und für info@kosaco.de angelegt)
-  var WEB3FORMS_KEY='HIER-ACCESS-KEY-EINTRAGEN';
+  var WEB3FORMS_KEY='84f40315-cc17-478b-b3b4-3a95e2a5d430';
   var form=document.getElementById('quote'), msg=document.getElementById('formMsg');
   if(form){form.addEventListener('submit',function(e){
     e.preventDefault();msg.hidden=false;
