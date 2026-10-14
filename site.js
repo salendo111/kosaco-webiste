@@ -123,7 +123,7 @@
     var sy=window.pageYOffset, W=document.documentElement.clientWidth, H=document.documentElement.scrollHeight;
     var wrap=main.querySelector('section .wrap')||document.querySelector('.wrap');
     var left=wrap.getBoundingClientRect().left;
-    var x=Math.max(12,Math.min(left-30,left-14)); if(left<40) x=9;
+    var x=Math.max(12,Math.min(left-30,left-14)); if(left<40) x=(W<=700?6:9);
     var pts=[]; 
     [].forEach.call(main.querySelectorAll('section .eyebrow, .band h2'),function(e){
       var r=e.getBoundingClientRect(); pts.push(r.top+sy+r.height/2);
@@ -133,7 +133,7 @@
     pts=pts.filter(function(y){return y>topY+30&&y<endY-30;});
     y0=topY; y1=endY;
     // Pfad mit sanften Versätzen zwischen den Knoten
-    var d='M'+x+' '+y0, cx=x, prev=y0, off=[0,12,0,-6];
+    var d='M'+x+' '+y0, cx=x, prev=y0, off=(W<=700?[0]:[0,12,0,-6]);
     pts.forEach(function(y,i){
       var nx=x+off[i%off.length], m=(prev+y)/2;
       d+=' C'+cx+' '+m+' '+nx+' '+m+' '+nx+' '+y; cx=nx; prev=y;
@@ -146,7 +146,7 @@
     pts.forEach(function(y,i){
       var nx=x+off[i%off.length];
       svg.appendChild(el('path',{d:'M'+nx+' '+y+'H'+(nx+16),'class':'tb-stub'}));
-      var n=el('rect',{x:nx-6,y:y-6,width:12,height:12,'class':'tb-node'}); svg.appendChild(n); nodes.push({el:n,y:y});
+      var ns=(W<=700?9:12); var n=el('rect',{x:nx-ns/2,y:y-ns/2,width:ns,height:ns,'class':'tb-node'}); svg.appendChild(n); nodes.push({el:n,y:y});
     });
     svg.appendChild(el('rect',{x:x-9,y:y1-9,width:18,height:18,'class':'tb-end'}));
     document.body.appendChild(svg);
