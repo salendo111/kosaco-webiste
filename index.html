@@ -1,53 +1,123 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website in Wartung</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #1e1e1e;
-            color: #ffffff;
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            flex-direction: column;
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: #cccccc;
-        }
-
-        .loader {
-            border: 8px solid #f3f3f3;
-            border-top: 8px solid #4caf50;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            animation: spin 1.5s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kosaco Bau und Dienstleistungen</title>
+<meta name="description" content="Tiefbau, Telekommunikation, Garten- und Landschaftsbau, Entrümpelung sowie Hochbau- und Ausbauprojekte mit Partnerbetrieben in Hamburg und Norddeutschland.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Website in Wartung</h1>
-    <p>Wir arbeiten gerade an unserer Website. Bitte schaue später wieder vorbei!</p>
-    <div class="loader"></div>
+<div class="topbar"><div class="wrap">
+  <ul><li>Lohbrügger Landstraße 204, 21031 Hamburg</li><li><a href="mailto:info@kosaco.de">info@kosaco.de</a></li><li><a href="tel:+4915780608138">Tel. +49 1578 0608138</a></li></ul>
+  <span class="em">Einsatz in Hamburg, Schleswig-Holstein, Niedersachsen &amp; Bremen</span>
+</div></div>
+<header class="site"><div class="wrap">
+  <a class="logo" href="index.html" aria-label="Kosaco Startseite"><img src="logo.jpg" alt="KOSACO Bau und Dienstleistungen" width="631" height="211"></a>
+  <nav class="main" id="nav" aria-label="Hauptmenü"><ul><li><a href="index.html" aria-current="page">Startseite</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="leistungen.html">Leistungen</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></nav>
+  <div class="head-cta"><a class="btn btn-green" href="kontakt.html">Angebot anfragen</a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menü</button></div>
+</div></header>
+<div class="pt pt-up" aria-hidden="true"><span class="pt-bar"></span><img src="logo.jpg" alt=""></div>
+<main data-fx="up">
+<section class="hero"><div class="glow" aria-hidden="true"></div><div class="wrap">
+  <div class="hero-copy">
+    <span class="eyebrow">Bau und Dienstleistungen aus Hamburg</span>
+    <h1>Wir bauen <span class="green">über</span> und <span class="green">unter</span> der Erde.</h1>
+  </div>
+  <div class="hero-fig"><svg class="scene" viewBox="0 70 580 176" role="img" aria-label="Illustration: Bagger, Bauarbeiter, Haus und Baum" preserveAspectRatio="xMidYMid meet">
+<g fill="none" stroke="#0D0F0D" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+<rect class="a-soil" x="0" y="218" width="580" height="26" fill="#E7EDE6" stroke="none"/>
+<path class="a-line" pathLength="1" d="M0 218H580" stroke-width="3"/>
+<path class="a-grass" d="M470 218H580" stroke="#2DB83B" stroke-width="5"/>
+<g class="a-exc"><rect x="22" y="201" width="86" height="17" rx="8.5" fill="#fff"/><circle cx="36" cy="209.5" r="3.5"/><circle cx="65" cy="209.5" r="3.5"/><circle cx="94" cy="209.5" r="3.5"/>
+<path d="M32 201V178H90V201Z" fill="#CDEFD1"/><rect x="60" y="154" width="30" height="24" fill="#fff"/><path d="M66 160H84V172H66Z"/>
+<g class="a-boom"><path d="M88 176L118 136L152 176" stroke-width="5"/><path d="M152 176L172 186L164 204L144 194Z" fill="#CDEFD1"/></g></g>
+<g transform="translate(220 218) scale(1.15)"><g class="a-w1"><path d="M-4 0V-16M4 0V-16" stroke-width="4"/><path d="M-8 -31L-14 -20"/><path d="M8 -31L14 -20"/><rect x="-8" y="-34" width="16" height="19" fill="#2DB83B"/><circle cx="0" cy="-41" r="6" fill="#fff"/><path d="M-7 -43A7 7 0 0 1 7 -43Z" fill="#2DB83B"/><path d="M-9 -43H9"/></g></g>
+<g transform="translate(300 218) scale(1.15)"><g class="a-w2"><path d="M-4 0V-16M4 0V-16" stroke-width="4"/><path d="M-8 -31L-14 -20"/><g transform="translate(8 -31)"><g class="wave"><path d="M0 0L8 9"/></g></g><rect x="-8" y="-34" width="16" height="19" fill="#2DB83B"/><circle cx="0" cy="-41" r="6" fill="#fff"/><path d="M-7 -43A7 7 0 0 1 7 -43Z" fill="#2DB83B"/><path d="M-9 -43H9"/></g></g>
+<g class="a-house"><rect x="428" y="98" width="12" height="30" fill="#fff"/>
+<rect x="346" y="140" width="108" height="78" fill="#fff"/><path d="M336 142L400 92L464 142Z" fill="#CDEFD1"/>
+<rect x="358" y="160" width="26" height="24" fill="#fff"/><path d="M371 160V184M358 172H384"/>
+<rect x="416" y="160" width="26" height="24" fill="#fff"/><path d="M429 160V184M416 172H442"/>
+<rect x="388" y="176" width="24" height="42" fill="#CDEFD1"/><circle cx="406" cy="198" r="1.8" fill="#0D0F0D"/></g>
+<g class="a-tree"><path d="M518 218V186" stroke-width="5"/><circle cx="518" cy="166" r="26" fill="#CDEFD1"/><path d="M518 200L508 190M518 192L528 182"/></g>
+</g>
+</svg>
+<div class="hero-panel"><div class="hp-stats"><div><b data-count="100">100+</b><span>Baustellen 2026</span></div><div><b data-count="4">4</b><span>Bundesländer</span></div><div><b>2019</b><span>Im Tiefbau seit</span></div></div><p class="hp-note">Subunternehmer für Circet Deutschland im Netz von Vodafone</p></div></div>
+</div></section>
+
+<section><div class="wrap split">
+  <div class="stack">
+    <span class="eyebrow">Über Kosaco</span>
+    <h2>Aus der Praxis gegründet, nicht vom Schreibtisch aus.</h2>
+    <p>Enes Kofrc hat 2019 als Tiefbauer angefangen, Kolonnen geführt und als Bauleiter und Teamleiter große Glasfaserprojekte verantwortet. Im Februar 2026 hat er Kosaco gegründet.</p>
+    <div class="actions"><a class="btn btn-black" href="ueber-uns.html">Mehr über uns</a></div>
+  </div>
+  <figure class="portrait"><img src="enes.jpg" alt="Enes Kofrc, Inhaber von Kosaco" width="1000" height="666" loading="lazy"><figcaption><strong>Enes Kofrc</strong><span>Inhaber</span></figcaption></figure>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Leistungen</span><h2>Was wir für Sie erledigen</h2>
+  <p>Schwerpunkt ist der Tiefbau für Telekommunikationsnetze. Dazu kommt alles rund um Grundstück und Baustelle.</p></div>
+  <div class="grid-3 grid-4"><a class="svc focus" href="leistungen.html#telekom"><span class="tag">Schwerpunkt</span><div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M2 8h20"/><path d="M7 8l2 12h6l2-12"/><circle cx="12" cy="16" r="2"/><path d="M12 2v3"/></svg></div><h3>Telekommunikations-Tiefbau</h3><p>Hausanschlüsse, Trassenbau, Leerrohrverlegung und Störungsbeseitigung für Glasfaser- und Kabelnetze.</p><span class="more">Mehr erfahren <span class="arr">→</span></span></a><a class="svc" href="leistungen.html#erdarbeiten"><div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M3 17h11l3-6h3"/><path d="M20 11l-2-5h-4"/><circle cx="6" cy="19" r="2"/><circle cx="12" cy="19" r="2"/></svg></div><h3>Erdarbeiten &amp; Pflaster</h3><p>Aushub, Gräben und Planum, dazu Pflaster für Einfahrten, Wege und Terrassen.</p><span class="more">Mehr erfahren <span class="arr">→</span></span></a><a class="svc" href="leistungen.html#garten"><div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M12 22V11"/><path d="M12 11c0-4 3-7 7-7 0 4-3 7-7 7z"/><path d="M12 14c0-3-2.5-5.5-6-5.5 0 3 2.5 5.5 6 5.5z"/><path d="M4 22h16"/></svg></div><h3>Garten, Pflege &amp; Winterdienst</h3><p>Gartenneuanlage, regelmäßige Pflege und Winterdienst.</p><span class="more">Mehr erfahren <span class="arr">→</span></span></a><a class="svc" href="leistungen.html#hochbau"><div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M4 21V9l8-5 8 5v12"/><path d="M9 21v-6h6v6"/></svg></div><h3>Hoch- &amp; Tiefbau</h3><p>Rohbau, Erschließung und Kanalbau, koordiniert mit Fachbetrieben.</p><span class="more">Mehr erfahren <span class="arr">→</span></span></a></div>
+  <div class="actions" style="margin-top:32px"><a class="btn btn-black" href="leistungen.html">Alle Leistungen ansehen</a></div>
+</div></section>
+
+<section><div class="wrap split">
+  <div class="stack">
+    <span class="eyebrow">Ein Ansprechpartner</span>
+    <h2>Eigene Leistungen und starke Partner</h2>
+    <p class="callout">Manche Gewerke dürfen nach der Handwerksordnung nur eingetragene Fachbetriebe ausführen. Dafür arbeiten wir mit Partnerbetrieben. Sie haben trotzdem <mark>ein Angebot, eine Rechnung und einen Ansprechpartner.</mark></p>
+    <div class="actions"><a class="btn btn-black" href="leistungen.html#partner">So arbeiten wir mit Partnern</a></div>
+  </div>
+  <ul class="tasks">
+    <li><div><strong>Eigenes Team</strong><span>Telekommunikation, Erdarbeiten, Garten, Rückbau und Montage führen wir mit eigenem Team und Gerät aus.</span></div></li>
+    <li><div><strong>Partnerbetriebe</strong><span>Hoch- und Tiefbau, Ausbau und Transport. Wir koordinieren, führen die Bauleitung und nennen den ausführenden Betrieb im Angebot namentlich.</span></div></li>
+    <li><div><strong>Geprüfte Nachweise</strong><span>Von Partnern lassen wir uns den Eintrag in die Handwerksrolle und die Betriebshaftpflicht nachweisen.</span></div></li>
+  </ul>
+</div></section>
+<section class="alt"><div class="wrap split">
+  <div class="stack">
+    <span class="eyebrow">Einsatzgebiet</span>
+    <h2>Unterwegs in ganz Norddeutschland</h2>
+    <p>Von unserem Standort in Hamburg-Bergedorf sind wir schnell bei Ihnen vor Ort.</p>
+    <div class="regions"><span>Hamburg</span><span>Schleswig-Holstein</span><span>Niedersachsen</span><span>Bremen</span></div>
+  </div>
+  <div class="process">
+    <h3>So läuft Ihr Auftrag ab</h3>
+    <ol>
+      <li><b>1</b><div><strong>Anfrage</strong><span>Per Formular, Telefon oder WhatsApp, gern mit Fotos.</span></div></li>
+      <li><b>2</b><div><strong>Besichtigung</strong><span>Wir schauen uns die Lage vor Ort an.</span></div></li>
+      <li><b>3</b><div><strong>Angebot</strong><span>Schriftlich, transparent und mit Terminvorschlag.</span></div></li>
+      <li><b>4</b><div><strong>Ausführung &amp; Abnahme</strong><span>Wir arbeiten sauber, stellen Oberflächen wieder her und übergeben gemeinsam.</span></div></li>
+    </ol>
+  </div>
+</div></section>
+<div class="band"><div class="wrap">
+  <h2>Sie planen ein Projekt? Wir melden uns innerhalb eines Werktags.</h2>
+  <div class="actions"><a class="btn btn-green" href="kontakt.html">Kostenloses Angebot</a><a class="btn btn-ghost" href="tel:+4915780608138">+49 1578 0608138</a></div>
+</div></div>
+</main>
+<div class="marquee mq-green" aria-hidden="true"><div class="mq-track"><div class="mq-set"><span>Telekommunikations-Tiefbau</span><i></i><span>Erdarbeiten &amp; Pflaster</span><i></i><span>Garten, Pflege &amp; Winterdienst</span><i></i><span>Rückbau &amp; Entrümpelung</span><i></i><span>Montage &amp; Baustellenservice</span><i></i><span>Hoch- &amp; Tiefbau</span><i></i><span>Ausbau &amp; Montage</span><i></i><span>Transport &amp; Logistik</span><i></i></div><div class="mq-set"><span>Telekommunikations-Tiefbau</span><i></i><span>Erdarbeiten &amp; Pflaster</span><i></i><span>Garten, Pflege &amp; Winterdienst</span><i></i><span>Rückbau &amp; Entrümpelung</span><i></i><span>Montage &amp; Baustellenservice</span><i></i><span>Hoch- &amp; Tiefbau</span><i></i><span>Ausbau &amp; Montage</span><i></i><span>Transport &amp; Logistik</span><i></i></div></div></div>
+<footer class="site"><div class="wrap">
+  <div class="f-top">
+    <span class="f-logo"><img src="logo.jpg" alt="KOSACO Bau und Dienstleistungen" width="631" height="211"></span>
+    <dl class="f-info">
+      <div><dt>Telefon</dt><dd><a href="tel:+4915780608138">+49 1578 0608138</a></dd></div>
+      <div><dt>E-Mail</dt><dd><a href="mailto:info@kosaco.de">info@kosaco.de</a></dd></div>
+      <div><dt>Adresse</dt><dd>Lohbrügger Landstraße 204<br>21031 Hamburg</dd></div>
+      <div><dt>Erreichbar</dt><dd>Mo bis Fr, 8 bis 16 Uhr</dd></div>
+    </dl>
+  </div>
+  <div class="legal"><span>© 2026 Kosaco Bau und Dienstleistungen · Inhaber Enes Kofrc</span>
+  <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span></div>
+</div></footer>
+<div class="float" aria-label="Schnellkontakt">
+  <a class="wa" href="https://wa.me/4915780608138" aria-label="WhatsApp schreiben"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.4 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.6-.1 1.1z"/></svg></a>
+  <a class="tel" href="tel:+4915780608138" aria-label="Anrufen"><svg viewBox="0 0 24 24" fill="#2DB83B"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 013 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></a>
+</div>
+<script src="site.js"></script>
 </body>
 </html>
