@@ -307,3 +307,18 @@ footer .legal{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-be
 .lb .x{top:6px;right:10px}.lb .p{left:4px;top:50%}.lb .n{right:4px;top:50%}
 @media (max-width:1100px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:760px){.grid{grid-template-columns:1fr}.mosaic{grid-template-columns:1fr 1fr}.gal{grid-template-columns:repeat(2,1fr)}}
+
+/* ===== Sachlicher Stil ===== */
+.svc{border:1px solid var(--line);border-top:4px solid var(--black)}
+.svc:hover{transform:none;box-shadow:none;border-color:var(--black)}
+.svc::after{display:none}
+.svc-img img{transition:none}.svc:hover .svc-img img{transform:none}
+.svc-b{padding:20px 22px 22px}
+.ph img{transition:none}.ph:hover img{transform:none}
+.tr-item{align-items:center}
+.gal{grid-template-columns:repeat(3,1fr);gap:10px}
+.chips span{border-radius:0;background:#fff;border:1px solid var(--line);color:var(--ink)}
+.btn{border-radius:0}
+.float{display:none!important}
+.chips-in label{border-radius:0}
+.tr-item{align-items:flex-start}
