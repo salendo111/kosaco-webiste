@@ -66,3 +66,22 @@
       .then(function(){b.disabled=false;});
   });}
 })();
+
+// Foto-Lightbox
+(function(){
+  var list=[].slice.call(document.querySelectorAll('a.ph')); if(!list.length) return;
+  var lb,img,idx=0,grp=[];
+  function show(i){idx=(i+grp.length)%grp.length; img.src=grp[idx].getAttribute('href');}
+  function close(){if(lb){document.body.removeChild(lb);lb=null;document.onkeydown=null;}}
+  list.forEach(function(a){a.addEventListener('click',function(e){
+    e.preventDefault();
+    grp=[].slice.call((a.closest('.body')||a.closest('.mosaic')).querySelectorAll('a.ph'));
+    lb=document.createElement('div');lb.className='lb';lb.setAttribute('role','dialog');
+    lb.innerHTML='<img alt=""><button class="x" aria-label="Schließen">×</button><button class="p" aria-label="Zurück">‹</button><button class="n" aria-label="Weiter">›</button>';
+    document.body.appendChild(lb);img=lb.querySelector('img');
+    lb.onclick=function(ev){if(ev.target===lb||ev.target.className==='x')close();};
+    lb.querySelector('.p').onclick=function(){show(idx-1)};lb.querySelector('.n').onclick=function(){show(idx+1)};
+    document.onkeydown=function(ev){if(ev.key==='Escape')close();if(ev.key==='ArrowLeft')show(idx-1);if(ev.key==='ArrowRight')show(idx+1);};
+    show(grp.indexOf(a));
+  });});
+})();
